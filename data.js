@@ -1,7 +1,7 @@
 const data = {
     products: [
       {
-        _id: '1',
+        id: '1',
         name: 'Nike Slim Shirt',
         category: 'Shirts',
         image: '/images/p1.jpg',
@@ -13,7 +13,7 @@ const data = {
         countInStock: 10,
       },
       {
-        _id: '2',
+        id: '2',
         name: 'Adidas Fit Shirt',
         category: 'Shirts',
         image: '/images/p2.jpg',
@@ -25,7 +25,7 @@ const data = {
         countInStock: 17,
       },
       {
-        _id: '3',
+        id: '3',
         name: 'Lacoste Shirt',
         category: 'Shirts',
         image: '/images/p3.jpg',
@@ -37,7 +37,7 @@ const data = {
         countInStock: 0,
       },
       {
-        _id: '4',
+        id: '4',
         name: 'Puma Shirt',
         category: 'Shirts',
         image: '/images/p4.jpg',
@@ -49,7 +49,7 @@ const data = {
         countInStock: 5,
       },
       {
-        _id: '5',
+        id: '5',
         name: 'Nike Slim Shirt',
         category: 'Shirts',
         image: '/images/p5.jpg',
@@ -61,7 +61,7 @@ const data = {
         countInStock: 7,
       },
       {
-        _id: '6',
+        id: '6',
         name: 'Nike Slim Shirt',
         category: 'Shirts',
         image: '/images/p6.jpg',
