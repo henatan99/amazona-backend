@@ -3,12 +3,21 @@ import mongoose from 'mongoose';
 import data from './data.js';
 import userRouter from './routers/userRouter.js';
 
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () =>{
+    console.log("Database connected");
+});
+
 const app = express();
-mongoose.connect('mongodb://localhost/amazona', {
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     // useCreateIndex: true
 })
+.then(() => console.log("Database connected!"))
+.catch(err => console.log(err));
+
 
 app.get('/api/products/:id', (req, res) => {
     const product = data.products.find(x => x.id === req.params.id);
