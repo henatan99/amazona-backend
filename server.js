@@ -1,8 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
-// import data from './data.js';
+import dotenv from 'dotenv';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
+
+dotenv.config();
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
